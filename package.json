@@ -1,0 +1,31 @@
+{
+  "name": "y",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run  server\" \"npm run client\"",
+    "postinstall": "ng build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alive2020/react-portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alive2020/react-portfolio/issues"
+  },
+  "homepage": "https://github.com/alive2020/react-portfolio#readme",
+  "dependencies": {
+    "concurrently": "^6.3.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "nodemailer": "^6.7.0",
+    "nodemon": "^2.0.14"
+  }
+}
