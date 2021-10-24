@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alive2020/react-portfolio.git"
+    "url": "git+https://github.com/alive2020/icecalee-react-resume.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/alive2020/react-portfolio/issues"
+    "url": "https://github.com/alive2020/icecalee-react-resume/issues"
   },
-  "homepage": "https://github.com/alive2020/react-portfolio#readme",
+  "homepage": "https://github.com/alive2020/icecalee-react-resume#readme",
   "dependencies": {
     "concurrently": "^6.3.0",
     "cors": "^2.8.5",
