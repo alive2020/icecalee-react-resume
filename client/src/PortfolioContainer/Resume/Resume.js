@@ -40,6 +40,14 @@ const Resume = (props) => {
         <div className='resume-heading-description'>
           <span>{props.description ? props.description : ''}</span>
         </div>
+        {props.link &&
+          props.link.map((link) => (
+            <div className='resume-heading-description'>
+              <a target='_blank' href={link.link}>
+                {link.label}
+              </a>
+            </div>
+          ))}
       </div>
     );
   };
@@ -69,12 +77,32 @@ const Resume = (props) => {
       duration: { fromDate: '2021.01', toDate: '2021.03' },
       description: t('Projects.1'),
       subHeading: 'Technologies used: Next.js, Node.js, CSS, Prismic',
+      link: [
+        {
+          link: `https://www.upkait.com/`,
+          label: 'Website',
+        },
+        {
+          link: `https://www.github.com/`,
+          label: 'Github',
+        },
+      ],
     },
     {
       title: 'Personal Portfolio Website',
       duration: { fromDate: '2020.12', toDate: '2021.01' },
       description: t('Projects.2'),
       subHeading: 'Technologies used: Javascript, CSS, HTML.',
+      link: [
+        {
+          link: `https://alive2020.github.io/my_portfolio/index.html`,
+          label: 'Website',
+        },
+        {
+          link: `https://github.com/alive2020/my_portfolio`,
+          label: 'Github',
+        },
+      ],
     },
   ];
 
@@ -117,7 +145,7 @@ const Resume = (props) => {
           <br />
           <span className='resume-description-text'>{t('Frontend.3')}</span>
           <br />
-          <span className='resume-description-text'>{t('Frontend.3')}</span>
+          <span className='resume-description-text'>{t('Frontend.4')}</span>
           <br />
         </div>
       </div>
@@ -131,6 +159,7 @@ const Resume = (props) => {
             key={index}
             heading={projectsDetails.title}
             subHeading={projectsDetails.subHeading}
+            link={projectsDetails.link}
             description={projectsDetails.description}
             fromDate={projectsDetails.duration.fromDate}
             toDate={projectsDetails.duration.toDate}
