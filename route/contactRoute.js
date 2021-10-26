@@ -8,7 +8,9 @@ router.post('/contact', (req, res) => {
     data.email.length === 0 ||
     data.message.length === 0
   ) {
-    return res.json({ msg: 'Please fill all the fields' });
+    return res.json({
+      msg: `Please fill all the fields, name:${data.name}, email:${data.email}, mes:${data.message}`,
+    });
   }
   let smtpTransporter = nodemailer.createTransport({
     service: 'Gmail',
@@ -39,6 +41,7 @@ router.post('/contact', (req, res) => {
         return res.status(400).json({ msg: 'Please fill all the fields' });
       res.status(200).json({ msg: 'Thank you for contacting Ice Calee!' });
     } catch (error) {
+      console.error(error);
       if (error) return res.status(500).json({ msg: 'There is server error' });
     }
   });
