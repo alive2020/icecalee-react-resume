@@ -40,14 +40,19 @@ const Resume = (props) => {
         <div className='resume-heading-description'>
           <span>{props.description ? props.description : ''}</span>
         </div>
-        {props.link &&
-          props.link.map((link) => (
-            <div className='resume-heading-description'>
-              <a target='_blank' href={link.link}>
+        <span>
+          {props.link &&
+            props.link.map((link) => (
+              <a
+                className='resume-heading-link'
+                target='_blank'
+                href={link.link}
+              >
+                <i class='fas fa-link'></i>
                 {link.label}
               </a>
-            </div>
-          ))}
+            ))}
+        </span>
       </div>
     );
   };
@@ -83,7 +88,7 @@ const Resume = (props) => {
           label: 'Website',
         },
         {
-          link: `https://www.github.com/`,
+          link: `https://github.com/arstan001/next-upkait`,
           label: 'Github',
         },
       ],
