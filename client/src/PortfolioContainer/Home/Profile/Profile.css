@@ -88,6 +88,9 @@
   padding: 8px;
   padding-left: 0px;
 }
+.colz .cols-icon a {
+  background-color: transparent;
+}
 
 .colz .colz-icon i:hover {
   transform: scale(1.5);
